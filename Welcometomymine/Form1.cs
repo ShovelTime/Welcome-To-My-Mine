@@ -68,6 +68,7 @@ namespace Welcometomymine
 
 
             Socket serverS = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
             public static IPEndPoint GetLocalEndPoint()
             {
                 using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
@@ -88,17 +89,17 @@ namespace Welcometomymine
             public void InitializeConnection()
             {
 
-                ConnectionHandler Connection = new ConnectionHandler();
-                Connection.serverS.Bind(GetLocalEndPoint());
-                Connection.serverS.Listen(5);
-                Socket conn = Connection.serverS.Accept();
+                
+                serverS.Bind(GetLocalEndPoint());
+                serverS.Listen(5);
+                Socket conn = serverS.Accept();
 
 
 
             }
             public void Refresh()
             {
-                Form1 form = new Form1();
+                
                 Ping pingSender = new Ping();
                 PingOptions options = new PingOptions();
                 options.DontFragment = true;
