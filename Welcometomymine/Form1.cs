@@ -61,69 +61,71 @@ namespace Welcometomymine
         {
 
         }
-    }
-    public class ConnectionHandler
-    {
-        public string[] ip = System.IO.File.ReadLines(System.IO.Directory.GetCurrentDirectory() + @"\ip.txt").ToArray();
-        
-
-
-        Socket serverS = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        public static IPEndPoint GetLocalEndPoint()
+        public class ConnectionHandler
         {
-            using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
+            public string[] ip = System.IO.File.ReadLines(System.IO.Directory.GetCurrentDirectory() + @"\ip.txt").ToArray();
+
+
+
+            Socket serverS = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            public static IPEndPoint GetLocalEndPoint()
             {
-                socket.Connect("8.8.8.8", 23);
-                IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
-                IPAddress ip = endPoint.Address;
-                IPEndPoint Host = new IPEndPoint(ip, 23);
-                socket.Close();
+                using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))
+                {
+                    socket.Connect("8.8.8.8", 23);
+                    IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
+                    IPAddress ip = endPoint.Address;
+                    IPEndPoint Host = new IPEndPoint(ip, 23);
+                    socket.Close();
 
 
-                return Host;
+                    return Host;
+                }
+
+
             }
 
-
-        }
-
-        public void InitializeConnection()
-        {
-
-            ConnectionHandler Connection = new ConnectionHandler();
-            Connection.serverS.Bind(GetLocalEndPoint());
-            Connection.serverS.Listen(5);
-            Socket conn = Connection.serverS.Accept();
-
-
-
-        }
-        public void Refresh()
-        {
-            Form1 form = new Form1;
-            Ping pingSender = new Ping();
-            PingOptions options = new PingOptions();
-            options.DontFragment = true;
-            string data = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-            byte[] buffer = Encoding.ASCII.GetBytes(data);
-            int timeout = 120;
-            foreach (string ips in ip)
+            public void InitializeConnection()
             {
-                PingReply reply = pingSender.Send(ips, timeout, buffer, options );
-                if (reply.Status == IPStatus.Success)
-                {
-                    ips.GetEnumerator();
-                    
-                    
-                 
 
+                ConnectionHandler Connection = new ConnectionHandler();
+                Connection.serverS.Bind(GetLocalEndPoint());
+                Connection.serverS.Listen(5);
+                Socket conn = Connection.serverS.Accept();
+
+
+
+            }
+            public void Refresh()
+            {
+                Form1 form = new Form1();
+                Ping pingSender = new Ping();
+                PingOptions options = new PingOptions();
+                options.DontFragment = true;
+                string data = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+                byte[] buffer = Encoding.ASCII.GetBytes(data);
+                int timeout = 120;
+                foreach (string ips in ip)
+                {
+                    PingReply reply = pingSender.Send(ips, timeout, buffer, options);
+                    if (reply.Status == IPStatus.Success)
+                    {
+                       string i = ips.GetEnumerator().ToString();
+                        string yolo = "IPAddress" + i;
+                        Form1.yolo.
+
+
+
+                    }
                 }
             }
-        }
 
-        public void Connect(IPEndPoint text)
-        {
+            public void Connect(IPEndPoint text)
+            {
 
+            }
         }
+    
 
     }
 }
