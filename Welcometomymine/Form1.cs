@@ -111,8 +111,7 @@ namespace Welcometomymine
                     if (reply.Status == IPStatus.Success)
                     {
                        string i = ips.GetEnumerator().ToString();
-                        string yolo = "IPAddress" + i;
-                        Form1.yolo.
+                        //TextBox curText = (TextBox)this.ip["IPAddress" + i.ToString()];
 
 
 

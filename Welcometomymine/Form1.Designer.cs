@@ -144,7 +144,6 @@ namespace Welcometomymine
             this.IPAddress0.ReadOnly = true;
             this.IPAddress0.Size = new System.Drawing.Size(222, 20);
             this.IPAddress0.TabIndex = 9;
-            this.IPAddress0.Text = "hi";
             this.IPAddress0.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
             // 
             // checkBox1
