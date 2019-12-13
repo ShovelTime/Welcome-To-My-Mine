@@ -1,0 +1,10 @@
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\bin\Debug\Welcometomymine.exe.config
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\bin\Debug\Welcometomymine.exe
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\bin\Debug\Welcometomymine.pdb
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\obj\Debug\Welcometomymine.csprojAssemblyReference.cache
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\obj\Debug\Welcometomymine.Form1.resources
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\obj\Debug\Welcometomymine.Properties.Resources.resources
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\obj\Debug\Welcometomymine.csproj.GenerateResource.cache
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\obj\Debug\Welcometomymine.csproj.CoreCompileInputs.cache
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\obj\Debug\Welcometomymine.exe
+C:\Users\Erik\source\repos\Welcometomymine\Welcometomymine\obj\Debug\Welcometomymine.pdb
