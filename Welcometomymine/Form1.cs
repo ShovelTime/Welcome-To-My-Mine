@@ -56,11 +56,16 @@ namespace Welcometomymine
         {
 
         }
+
+        private void TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
     public class ConnectionHandler
     {
         public string[] ip = System.IO.File.ReadLines(System.IO.Directory.GetCurrentDirectory() + @"\ip.txt").ToArray();
-
+        
 
 
         Socket serverS = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -94,7 +99,25 @@ namespace Welcometomymine
         }
         public void Refresh()
         {
+            Form1 form = new Form1;
+            Ping pingSender = new Ping();
+            PingOptions options = new PingOptions();
+            options.DontFragment = true;
+            string data = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+            byte[] buffer = Encoding.ASCII.GetBytes(data);
+            int timeout = 120;
+            foreach (string ips in ip)
+            {
+                PingReply reply = pingSender.Send(ips, timeout, buffer, options );
+                if (reply.Status == IPStatus.Success)
+                {
+                    ips.GetEnumerator();
+                    
+                    
+                 
 
+                }
+            }
         }
 
         public void Connect(IPEndPoint text)

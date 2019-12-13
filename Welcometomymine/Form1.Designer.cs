@@ -37,15 +37,15 @@ namespace Welcometomymine
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.IPAddress2 = new System.Windows.Forms.TextBox();
+            this.IPAddress1 = new System.Windows.Forms.TextBox();
+            this.IPAddress0 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.ok0 = new System.Windows.Forms.TextBox();
+            this.ok1 = new System.Windows.Forms.TextBox();
+            this.ok2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -117,34 +117,35 @@ namespace Welcometomymine
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
-            // textBox1
+            // IPAddress2
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(102, 163);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(222, 20);
-            this.textBox1.TabIndex = 7;
+            this.IPAddress2.Enabled = false;
+            this.IPAddress2.Location = new System.Drawing.Point(102, 163);
+            this.IPAddress2.Name = "IPAddress2";
+            this.IPAddress2.ReadOnly = true;
+            this.IPAddress2.Size = new System.Drawing.Size(222, 20);
+            this.IPAddress2.TabIndex = 7;
+            this.IPAddress2.TextChanged += new System.EventHandler(this.TextBox1_TextChanged_1);
             // 
-            // textBox2
+            // IPAddress1
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(102, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(222, 20);
-            this.textBox2.TabIndex = 8;
+            this.IPAddress1.Enabled = false;
+            this.IPAddress1.Location = new System.Drawing.Point(102, 125);
+            this.IPAddress1.Name = "IPAddress1";
+            this.IPAddress1.ReadOnly = true;
+            this.IPAddress1.Size = new System.Drawing.Size(222, 20);
+            this.IPAddress1.TabIndex = 8;
             // 
-            // textBox3
+            // IPAddress0
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(102, 83);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(222, 20);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "hi";
-            this.textBox3.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
+            this.IPAddress0.Enabled = false;
+            this.IPAddress0.Location = new System.Drawing.Point(102, 83);
+            this.IPAddress0.Name = "IPAddress0";
+            this.IPAddress0.ReadOnly = true;
+            this.IPAddress0.Size = new System.Drawing.Size(222, 20);
+            this.IPAddress0.TabIndex = 9;
+            this.IPAddress0.Text = "hi";
+            this.IPAddress0.TextChanged += new System.EventHandler(this.TextBox3_TextChanged);
             // 
             // checkBox1
             // 
@@ -176,41 +177,44 @@ namespace Welcometomymine
             this.checkBox3.Text = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // ok0
             // 
-            this.textBox4.Location = new System.Drawing.Point(330, 83);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(139, 20);
-            this.textBox4.TabIndex = 19;
+            this.ok0.Location = new System.Drawing.Point(330, 83);
+            this.ok0.Name = "ok0";
+            this.ok0.ReadOnly = true;
+            this.ok0.Size = new System.Drawing.Size(139, 20);
+            this.ok0.TabIndex = 19;
             // 
-            // textBox5
+            // ok1
             // 
-            this.textBox5.Location = new System.Drawing.Point(330, 125);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 20);
-            this.textBox5.TabIndex = 20;
+            this.ok1.Location = new System.Drawing.Point(330, 125);
+            this.ok1.Name = "ok1";
+            this.ok1.ReadOnly = true;
+            this.ok1.Size = new System.Drawing.Size(139, 20);
+            this.ok1.TabIndex = 20;
             // 
-            // textBox6
+            // ok2
             // 
-            this.textBox6.Location = new System.Drawing.Point(330, 163);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(139, 20);
-            this.textBox6.TabIndex = 21;
+            this.ok2.Location = new System.Drawing.Point(330, 163);
+            this.ok2.Name = "ok2";
+            this.ok2.ReadOnly = true;
+            this.ok2.Size = new System.Drawing.Size(139, 20);
+            this.ok2.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.ok2);
+            this.Controls.Add(this.ok1);
+            this.Controls.Add(this.ok0);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.IPAddress0);
+            this.Controls.Add(this.IPAddress1);
+            this.Controls.Add(this.IPAddress2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -234,15 +238,15 @@ namespace Welcometomymine
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox IPAddress2;
+        private System.Windows.Forms.TextBox IPAddress1;
+        private System.Windows.Forms.TextBox IPAddress0;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox ok0;
+        private System.Windows.Forms.TextBox ok1;
+        private System.Windows.Forms.TextBox ok2;
     }
 }
 
