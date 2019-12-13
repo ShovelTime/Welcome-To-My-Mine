@@ -15,9 +15,12 @@ namespace Welcometomymine
 {
     public partial class Form1 : Form
     {
+        ConnectionHandler Connection = new ConnectionHandler();
         public Form1()
         {
+            
             InitializeComponent();
+            Connection.InitializeConnection();
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
@@ -33,6 +36,10 @@ namespace Welcometomymine
         private void Button2_Click(object sender, EventArgs e)
         {
 
+        }
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            Connection.Refresh();
         }
 
         private void Button7_Click(object sender, EventArgs e)
@@ -53,7 +60,7 @@ namespace Welcometomymine
     public class ConnectionHandler
     {
         public string[] ip = System.IO.File.ReadLines(System.IO.Directory.GetCurrentDirectory() + @"\ip.txt").ToArray();
-        
+
 
 
         Socket serverS = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -67,28 +74,32 @@ namespace Welcometomymine
                 IPEndPoint Host = new IPEndPoint(ip, 23);
                 socket.Close();
 
-                
+
                 return Host;
             }
-           
+
 
         }
 
-        static void Main()
+        public void InitializeConnection()
         {
-            
+
             ConnectionHandler Connection = new ConnectionHandler();
             Connection.serverS.Bind(GetLocalEndPoint());
             Connection.serverS.Listen(5);
             Socket conn = Connection.serverS.Accept();
-            Connection.HandleConnection();
 
 
 
         }
-        void HandleConnection()
+        public void Refresh()
         {
-            
+
+        }
+
+        public void Connect(IPEndPoint text)
+        {
+
         }
 
     }
